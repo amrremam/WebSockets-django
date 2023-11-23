@@ -8,15 +8,11 @@ from chat.models import Thread, Message
 
 
 
-
-
 class ThreadView(View):
     template_name = 'chat/chat.html'
 
-
     def get_queryset(self):
         return Thread.objects.by_user(self.request.user)
-
 
     def get_object(self):
         other_username  = self.kwargs.get("username")

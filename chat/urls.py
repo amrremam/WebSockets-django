@@ -4,5 +4,5 @@ from chat.views import ThreadView
 
 
 urlpatterns = [
-    # path('/')
+    path('<str:username>/', ThreadView.as_view())
 ]

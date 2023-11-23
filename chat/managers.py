@@ -2,6 +2,8 @@ from django.db import models
 from django.db.models import Count
 
 
+
+
 class ThreadManager(models.Manager):
     def get_or_create_personal_thread(self, user1, user2):
         threads = self.get_queryset().filter(thread_type='personal')
